@@ -4,11 +4,11 @@ import styled from 'styled-components'
 const Text = styled.h1`
     text-align: center;
     margin-top: 0;
-    margin-bottom: -2vw;
+    margin-bottom: -2vmax;
 `;
 
 const MirroredText = styled.h1`
-    margin-top: -4.5vw;
+    margin-top: -4.5vmax;
     margin-bottom: 0;
     text-align: center;
     transform: scaleX(-1) rotate(180deg);

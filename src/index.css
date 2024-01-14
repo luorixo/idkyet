@@ -79,20 +79,20 @@ body {
 }
 
 h1 {
-  font-size: 3.7vw;
+  font-size: 3.7vmax;
   font-weight: 900;
-  letter-spacing: 1vw;
+  letter-spacing: 1vmax;
 }
 
 h2 {
-  font-size: 2.7vw;
-  letter-spacing: 1.8vw;
+  font-size: 2.7vmax;
+  letter-spacing: 1.8vmax;
 }
 
 h4 {
-  font-size: 1.1vw;
+  font-size: 1.1vmax;
   font-weight: normal;
-  letter-spacing: 0.2vw;
+  letter-spacing: 0.2vmax;
 }
 
 button {

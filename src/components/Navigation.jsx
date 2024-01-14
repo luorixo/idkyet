@@ -3,10 +3,18 @@ import React, { useContext } from 'react'
 import CursorContext from '../utils/CursorContext'
 import styled from 'styled-components';
 import RandomPokemon from './RandomPokemon';
+import ThemeToggleButton from './ThemeToggleButton';
 
-const ThemeToggleButton = styled.button`
-    position: absolute;
-    right: 0;
+const StyledThemeToggleButton = styled(ThemeToggleButton)`
+    position: fixed;
+    right: 3vmax;
+    top: 2vmax;
+`
+
+const StyledRandomPokemon = styled(RandomPokemon)`
+    position: fixed;
+    bottom: 3vmax;
+    left: 3.3vmax;
 `
 
 const Navigation = React.memo(({toggleCurrentTheme}) => {
@@ -14,8 +22,8 @@ const Navigation = React.memo(({toggleCurrentTheme}) => {
     const toggleCursorMode = useContext(CursorContext)
 
     return <>
-        <ThemeToggleButton onClick={toggleCurrentTheme} onMouseOver={toggleCursorMode} onMouseLeave={toggleCursorMode}>Theme Toggle</ThemeToggleButton>
-        <RandomPokemon />
+        <StyledThemeToggleButton toggleCurrentTheme={toggleCurrentTheme}/>
+        <StyledRandomPokemon />
     </>
 })
 

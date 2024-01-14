@@ -1,16 +1,20 @@
+import PropTypes from 'prop-types'
 import { useContext, useEffect, useState } from 'react'
 import CursorContext from '../utils/CursorContext'
 import styled from 'styled-components';
 
-const pokemonIdRange = 898
+const pokemonIdRange = 1010
 
 const CurrentPokemon = styled.img`
-    height: 3vw;
-    opacity: 0.9;
+    min-height: 3%.5;
+    max-height: 4vmax;
+    max-width: 4vmax;
+    opacity: 0.75;
     cursor: pointer;
+    filter: contrast(140%) brightness(110%) drop-shadow(0 0.05vmax 0.6vmax #fff);
 `
 
-const RandomPokemon = () => {
+const RandomPokemon = ({ className }) => {
 
     const [frontSprite, setFrontSprite] = useState(null)
 
@@ -45,10 +49,13 @@ const RandomPokemon = () => {
         fetchRandomPokemon()
     }, [])
 
-    return <>
-        <div>hello</div>
+    return <span className={className}>
         <CurrentPokemon onMouseOver={toggleCursorMode} onMouseLeave={toggleCursorMode} src={frontSprite}/>
-    </>
+    </span>
+}
+
+RandomPokemon.propTypes = {
+    className: PropTypes.any
 }
 
 export default RandomPokemon
